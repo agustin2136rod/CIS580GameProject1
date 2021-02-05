@@ -7373,23 +7373,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aug\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\agustinr\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aug\\source\\repos\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1.csproj",
+      "projectUniqueName": "C:\\Users\\agustinr\\Source\\Repos\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1.csproj",
       "projectName": "CIS580GameProject1",
-      "projectPath": "C:\\Users\\Aug\\source\\repos\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1.csproj",
-      "packagesPath": "C:\\Users\\Aug\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aug\\source\\repos\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1\\obj\\",
+      "projectPath": "C:\\Users\\agustinr\\Source\\Repos\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1.csproj",
+      "packagesPath": "C:\\Users\\agustinr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\agustinr\\Source\\Repos\\CIS580GameProject1\\CIS580GameProject1\\CIS580GameProject1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\agustinr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -7443,7 +7445,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -28,7 +28,7 @@ namespace CIS580GameProject1
             System.Random random = new System.Random();
             ballVelocity = new Vector2((float)random.NextDouble(), (float)random.NextDouble());
             ballVelocity.Normalize();
-            ballVelocity *= 100;
+            ballVelocity *= 600;
 
             base.Initialize();
         }
