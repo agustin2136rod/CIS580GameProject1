@@ -72,3 +72,5 @@ C:\Users\agustinr\Source\Repos\CIS580GameProject1\CIS580GameProject1\CIS580GameP
 C:\Users\agustinr\Source\Repos\CIS580GameProject1\CIS580GameProject1\CIS580GameProject1\obj\Debug\netcoreapp3.1\CIS580GameProject1.dll
 C:\Users\agustinr\Source\Repos\CIS580GameProject1\CIS580GameProject1\CIS580GameProject1\obj\Debug\netcoreapp3.1\CIS580GameProject1.pdb
 C:\Users\agustinr\Source\Repos\CIS580GameProject1\CIS580GameProject1\CIS580GameProject1\obj\Debug\netcoreapp3.1\CIS580GameProject1.genruntimeconfig.cache
+C:\Users\Aug\Source\Repos\CIS580GameProject1\CIS580GameProject1\CIS580GameProject1\bin\Debug\netcoreapp3.1\Content\arial.xnb
+C:\Users\Aug\Source\Repos\CIS580GameProject1\CIS580GameProject1\CIS580GameProject1\bin\Debug\netcoreapp3.1\Content\slime.xnb
