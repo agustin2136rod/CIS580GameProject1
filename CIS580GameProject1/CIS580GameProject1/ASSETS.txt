@@ -9,3 +9,9 @@ Collisions/BoundingCircle.cs - received from CollisionExample demo from Nathan B
 Collisions/CollisionHelper.cs - received from CollisionExample demo from Nathan Bean
 
 SlimeGhostSprite.cs - received from CollisionExample demo from Nathan Bean
+
+Content/32x32-bat-sprite.png - created by bagzie on OpenGameArg.org (https://opengameart.org/content/bat-sprite) and relased under OGA-BY 3.0 
+
+Content/Jump2.wav - created by Agustin Rodriguez with BFXR, released under the public domain
+
+BatSprite.cs - receieved SpriteExample Demo from Nathan Bean

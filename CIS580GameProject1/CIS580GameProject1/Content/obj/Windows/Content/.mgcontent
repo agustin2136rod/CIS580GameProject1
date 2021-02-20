@@ -4,11 +4,15 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Aug/Source/Repos/CIS580GameProject1/CIS580GameProject1/CIS580GameProject1/Content/32x32-bat-sprite.png</File>
     <File>C:/Users/Aug/Source/Repos/CIS580GameProject1/CIS580GameProject1/CIS580GameProject1/Content/arial.spritefont</File>
     <File>C:/Users/Aug/Source/Repos/CIS580GameProject1/CIS580GameProject1/CIS580GameProject1/Content/ball.png</File>
+    <File>C:/Users/Aug/Source/Repos/CIS580GameProject1/CIS580GameProject1/CIS580GameProject1/Content/Jump2.wav</File>
     <File>C:/Users/Aug/Source/Repos/CIS580GameProject1/CIS580GameProject1/CIS580GameProject1/Content/slime.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

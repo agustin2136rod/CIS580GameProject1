@@ -3,6 +3,7 @@
  */
 using CIS580GameProject1.Collisions;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Diagnostics;
@@ -19,13 +20,12 @@ namespace CIS580GameProject1
         private SpriteBatch _spriteBatch;
 
         //set up all variables
-        private Vector2 ballPosition;
-        private Vector2 ballVelocity;
         private Texture2D ballTexture;
         private SlimeGhostSprite slimeGhost;
         private SpriteFont spriteFont;
         private BoundingCircle bounding;
         private Stopwatch stopWatch;
+        private BatSprite bat;
         
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace CIS580GameProject1
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             //instructions for the game
-            Window.Title = "Don't Get Hit Game - Avoid getting hit by the ball for as long as possible!";
+            Window.Title = "Don't Get Hit Game - Avoid getting hit by the bat for as long as possible!";
             
         }
 
@@ -47,12 +47,9 @@ namespace CIS580GameProject1
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            ballPosition = new Vector2(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
-            bounding = new BoundingCircle(ballPosition, 64);
-            System.Random random = new System.Random();
-            ballVelocity = new Vector2((float)random.NextDouble(), (float)random.NextDouble());
-            ballVelocity.Normalize();
-            ballVelocity *= 1500;
+            bounding = new BoundingCircle(new Vector2(200, 500), 16);
+            bat = new BatSprite() { Position = new Vector2(150, 150), Direction = Direction.Right };
+
             slimeGhost = new SlimeGhostSprite();
             stopWatch = new Stopwatch();
             stopWatch.Start();
@@ -66,9 +63,11 @@ namespace CIS580GameProject1
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            ballTexture = Content.Load<Texture2D>("ball");
+            bat.LoadContent(Content);
             slimeGhost.LoadContent(Content);
             spriteFont = Content.Load<SpriteFont>("arial");
+            bat.LoadContent(Content);
+            
 
             // TODO: use this.Content to load your game content here
         }
@@ -84,6 +83,7 @@ namespace CIS580GameProject1
 
             // TODO: Add your update logic here
             slimeGhost.Update(gameTime);
+            bat.Update(gameTime);
             slimeGhost.Color = Color.White;
             if (slimeGhost.Bounds.CollidesWith(bounding))
             {
@@ -92,17 +92,7 @@ namespace CIS580GameProject1
                 stopWatch.Restart();
             }
 
-            //code receieved from Nathan Bean to implement the ball moving across the screen from HelloGame Demo
-            ballPosition += (float)gameTime.ElapsedGameTime.TotalSeconds * ballVelocity;
-            bounding.Center = ballPosition;
-            if (ballPosition.X < GraphicsDevice.Viewport.X || ballPosition.X > GraphicsDevice.Viewport.Width - 64)
-            {
-                ballVelocity.X *= -1;
-            }
-            if (ballPosition.Y < GraphicsDevice.Viewport.Y || ballPosition.Y > GraphicsDevice.Viewport.Height - 64)
-            {
-                ballVelocity.Y *= -1;
-            }
+            
 
             base.Update(gameTime);
         }
@@ -113,13 +103,14 @@ namespace CIS580GameProject1
         /// <param name="gameTime">total time of the game</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.White);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
             slimeGhost.Draw(gameTime, _spriteBatch);
-            _spriteBatch.Draw(ballTexture, ballPosition, Color.White);
+            bat.Draw(gameTime, _spriteBatch);
             _spriteBatch.DrawString(spriteFont, $"Total time without being hit:{stopWatch.Elapsed:c}", new Vector2(2, 2), Color.Gold);
+            _spriteBatch.DrawString(spriteFont, $"Press space to Jump:", new Vector2(0, 45), Color.Gold);
             _spriteBatch.End();
             base.Draw(gameTime);
         }
